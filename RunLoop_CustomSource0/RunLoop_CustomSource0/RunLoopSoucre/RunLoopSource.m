@@ -12,6 +12,9 @@
 
 - (instancetype)init
 {
+    //创建一个自定义runloop source
+    //参数2是回调函数触发时传入的上下文
+    //函数参数最后3个传入对应的回调函数
     CFRunLoopSourceContext    context = {0, (__bridge void*)(self), NULL, NULL, NULL, NULL, NULL,
                                             &RunLoopSourceScheduleRoutine,
                                             &RunLoopSourceCancelRoutine,
